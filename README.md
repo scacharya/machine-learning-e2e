@@ -8,6 +8,7 @@ These tasks will be based on the this guide: https://github.com/scacharya/machin
 
 **Getting the code** 
 Execute following command to the directory of your choice (say <work-dir>)
+
 $ git clone https://github.com/scacharya/machine-learning-e2e.git
 
 **Basic Git operations**
