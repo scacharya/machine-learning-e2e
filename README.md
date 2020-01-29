@@ -7,12 +7,12 @@ This project is intended to conducting research focusing on:
 These tasks will be based on the this guide: https://github.com/scacharya/machine-learning-e2e/blob/develop/doc/impl-guide.md
 
 **Getting the code** 
-Execute following command to the directory of your choice (say <work-dir>)
+Execute following command to the directory of your choice (say work-dir)
 
 $ git clone https://github.com/scacharya/machine-learning-e2e.git
 
 **Basic Git operations**
-Perform following in <work-dir>: 
+Perform following in work-dir: 
 1. $ git checkout develop 
 2. $ git pull
 ... ... edit or add files/dirs...  
