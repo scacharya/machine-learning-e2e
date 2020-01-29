@@ -11,9 +11,10 @@ Execute following command to the directory of your choice (say <work-dir>)
 $ git clone https://github.com/scacharya/machine-learning-e2e.git
 
 **Basic Git operations**
-in <work-dir>
+Perform following in <work-dir>: 
 1. $ git checkout develop 
 2. $ git pull
+... ... edit or add files/dirs...  
 3. $ git status
 4. $ git add *
 5. $ git push --set-upstream origin develop
