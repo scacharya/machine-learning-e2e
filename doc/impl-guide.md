@@ -127,3 +127,4 @@ Assuming enough data is available, the type of solution should be identified:
 2. Lars Buitinck, et. al, API design for machine learning software: experiences from the scikit-learn project https://dtai.cs.kuleuven.be/events/lml2013/papers/lml2013_api_sklearn.pdf
 3. Cross-industry standhttps://en.wikipedia.org/wiki/Cross-industry_standard_process_for_data_miningard process for data mining 
 4. https://www.datanami.com/2020/01/27/an-open-source-alternative-to-aws-sagemaker/
+5. https://www.featuretools.com/
