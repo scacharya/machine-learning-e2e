@@ -1,7 +1,6 @@
 # Applied Machine Learning 
-## Steps for end to end machine learning project automation best practices and automation 
+## Steps for end to end machine learning project best practices and automation 
 This document is a consolidated guide for executing machine learning projects with a focus on automation best practices learned from varying sources listed in Appendix 1. 
-
 
 A Python based sample implementation of end to end machine learning project with focus on the automation and best practices is available here. The steps are based on CRISP-DM methodology(process framework)  
 # Business Understanding 
