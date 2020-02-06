@@ -22,4 +22,4 @@ Perform following in work-dir:
 6. $ git commit -m "commit comment"
 
 **Open a pull request **
-Create a pull request for 'develop' on GitHub by visiting: https://github.com/scacharya/machine-learning-e2e/pull/new/develop
+1)Create a pull request for 'develop' on GitHub by visiting: https://github.com/scacharya/machine-learning-e2e/pull/new/develop
