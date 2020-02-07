@@ -1,14 +1,21 @@
 import pandas as pd
-from mle2e import DataTypes as dt
+import datatable as dtbl
+import urllib.error as ue
+
 
 """
 The class file to encapsulate **ALL** type of data sources
+The datatable import $ pip install datatable. If this command fails for newer version of python then
+ Run following directly from git repo $ pip install git+https://github.com/h2oai/datatable
 """
 
 class MLE2EDS:
 
     def __init__(self, source):
         self.data_source = source
+        self.data_frame = None
+        self.data_table = None
+
 
     """
     Assuming the source string as https://some-site.com/data/file-name.ext
@@ -16,21 +23,24 @@ class MLE2EDS:
     2) for other file types, tgz, zip or .gzip, then a)download b) extract and c) read to dataframe 
     """
 
-    @property
-    def get_data(self):
+    def read_df_csv(self):
         if self.data_source.upper().endswith(".CSV"):
-            return pd.read_csv(self.data_source)
+            try:
+                self.data_frame = pd.read_csv(self.data_source)
+                return self.data_frame
+            except ue.URLError as urlerr:
+                print("URLError occurred trying to connect", urlerr)
         else:
-            pass
-            ##Read for other files like tgz, zip gzip etc
-            ##"if the file does not exist locally, then download and extract it"
-            ##if extracted file is csv, read it
-            ## if extracted file is text with speficic delimeter, then read it accordingly
+            print("only .csv files are supported, use datatable instead ")
+
 
     """
     datatable reads much faster, file with multiple delimeter and different format
     """
-    def get_data_table(self):
-        return dt.fread(self.data_source)
+    def read_datatable(self):
+        self.data_table=dtbl.fread(self.data_source)
+        return self.data_table
 
 
+    def show_summary(self):
+        pass

@@ -1,21 +1,10 @@
-"""The file is contains utility classes and methods to read data and run some basic data checks
-
+"""
+Utility to consolidate the data into a single class for step #1) Data Understanding in  CRIPS-DM methodology
 """
 
-#This file has dependency to following python libraries:
-#  Pandas, Numpy, sklearn,
-
-
-from mle2e import DataTypes as dt
 from mle2e import data_source as ds
-import urllib.error as ue
 
+DATA_URL = "https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv"
+data_source = ds.MLE2EDS(DATA_URL)
 
-try:
-    #mydf = ds.retrieve_data("https://raw.githubusercontent.com/cs109/2014_data/master/", "countries.csv", dt.CSV)
-    mydf = ds.MLE2EDS("https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv").get_data
-
-    print(mydf.head())
-except ue.URLError as urlerr:
-    print("URLError occurred trying to connect", urlerr)
-
+data_source.show_summary()
