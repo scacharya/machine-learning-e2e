@@ -51,9 +51,9 @@ def check_and_download_acrhive_file(someurl):
     datadir = os.getcwd() + "/data/"
     file_path = Path(datadir+file_to_download)
     if file_path.is_file():
-        print("File exists in data directory, not downloading")
+        print(file_path, "exists in data directory, not downloading")
     else:
-        print("File does not exist in data directory, downloading and extracting...")
+        print(file_path, "does not exist in data directory, downloading and extracting...")
         if someurl.upper().endswith(".ZIP"):
             with urllib.request.urlopen(someurl) as response, open(file_path, 'wb') as out_file:
                 shutil.copyfileobj(response, out_file)
@@ -89,9 +89,9 @@ def check_and_download_csv_file(url):
 Read the file using datatable 
 """
 def load_data(filename):
-    ##try opening .csv file instad
+    filetoopen = str(filename).replace(".tgz", ".csv", 1)
+    print("Try reading(freed) from ", filename)
     try:
-        filetoopen = str(filename).replace(".tgz", ".csv",1)
         data_table = dtbl.fread(filetoopen, fill=True)
         return data_table
     except RuntimeError as re:
