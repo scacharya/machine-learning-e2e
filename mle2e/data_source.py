@@ -95,4 +95,4 @@ def load_data(filename):
         data_table = dtbl.fread(filetoopen, fill=True)
         return data_table
     except RuntimeError as re:
-        print("Unable to read the file into datatable, trying to downlaod", re)
+        print("Unable to read the file into datatable, please check file in local data directory", re)

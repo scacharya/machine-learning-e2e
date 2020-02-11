@@ -10,4 +10,4 @@ DATA_URL = "https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets
 
 local_file = ds.get_data(DATA_URL)
 summary_dtbl = ds.load_data(local_file)
-print(summary_dtbl.to_pandas().head(50))
+print(summary_dtbl.to_pandas().head())
