@@ -90,7 +90,7 @@ Read the file using datatable
 """
 def load_data(filename):
     filetoopen = str(filename).replace(".tgz", ".csv", 1)
-    print("Try reading(freed) from ", filename)
+    print("Try reading(freed) from ", filetoopen)
     try:
         data_table = dtbl.fread(filetoopen, fill=True)
         return data_table
